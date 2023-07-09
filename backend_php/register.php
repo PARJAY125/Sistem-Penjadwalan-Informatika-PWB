@@ -75,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         mysqli_query($conn,$query);
         
         $_SESSION['username'] = $name;
-        header('Location: ../mahasiswa/dashboard.php');
+        header('Location: ../web_penjadwalan/dashboard_dosen.html');
         exit;
     }
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Form Registrasi</title>
+    <title>Form Login</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -23,49 +23,44 @@
 
                   <div class="mb-md-5 mt-md-4 pb-5">
                     <h3 class="text-white-50 mb-5">Registrasi</h3>
-                  <form action="../backend_php/register.php?category=mahasiswa" method="post">
+                    <form action="../backend_php/register.php?category=dosen" method="post">
                     <div class="form-outline form-white">
-                        <input type="name" id="typeName" class="form-control form-control-lg" placeholder="Nama Lengkap" name="name" />
-                        <label class="form-label" for="typeName" ></label>
+                      <input type="lecturername" id="LecturName" class="form-control form-control-lg" placeholder="Nama Lengkap" name="name" />
+                      <label class="form-label" for="LectureName"></label>
                     </div>
 
                     <div class="form-outline form-white">
-                        <input type="username" id="typeUsername" class="form-control form-control-lg" placeholder="Username atau NIM" name="username"/>
-                        <label class="form-label" for="typeUsername" ></label>
+                      <input type="lecturerusername" id="LecturUsername" class="form-control form-control-lg" placeholder="Username atau NIP" name="username"/>
+                      <label class="form-label" for="LecturUsername"></label>
                     </div>
 
                     <div class="form-outline form-white">
-                      <input type="email" id="typeEmail" class="form-control form-control-lg" placeholder="Email" name="email"/>
-                      <label class="form-label" for="typeEmail" ></label>
-                    </div>
-
-                    <div class="form-outline form-white">
-                      <input type="telp" id="typeTelp" class="form-control form-control-lg" placeholder="Nomor Telpon" name="telp"/>
-                      <label class="form-label" for="typeTelp"></label>
-                    </div>
-
-                    <div class="form-outline form-white">
-                        <input type="kelas" id="typeKelas" class="form-control form-control-lg" placeholder="Kelas" name="class"/>
-                        <label class="form-label" for="typeKelas" ></label>
+                      <input type="lecturemail" id="lecturemail" class="form-control form-control-lg" placeholder="Email" name="email" />
+                      <label class="form-label" for="LecturEmail"></label>
                     </div>
       
                     <div class="form-outline form-white">
-                      <input type="password" id="typePassword" class="form-control form-control-lg" placeholder="Password" name="password"/>
-                      <label class="form-label" for="typePassword" ></label>
+                      <input type="lecturtelp" id="LecturTelp" class="form-control form-control-lg" placeholder="Nomor Telpon" name="telp"/>
+                      <label class="form-label" for="LecturTelp"></label>
+                    </div>
+      
+                    <div class="form-outline form-white">
+                      <input type="password" id="LecturePass" class="form-control form-control-lg" placeholder="Password" name="password"/>
+                      <label class="form-label" for="LecturPass"></label>
                     </div>
 
                     <div class="form-outline form-white">
-                        <input type="password" id="ConfirmPass" class="form-control form-control-lg" placeholder="Konfirmasi Password" />
-                        <label class="form-label" for="confirmpassword"></label>
-                      </div>
+                      <input type="password" id="LectureConfirmPass" class="form-control form-control-lg" placeholder="Konfirmasi Password" />
+                      <label class="form-label" for="LecturConfirmPass"></label>
+                    </div>
 
                     <button type="submit" class="btn btn-primary" style="width: 100%; height: 50px;">Daftar</button>
-                  </form>
+                    </form>
                     
                   </div>
                   
                   <div>
-                    <p class="mb-0 " style="margin-top: -70px;">atau daftar sebagai? <a href="./registrasi_dosen.php" class="text-white-50 fw-bold"> Dosen</a>
+                    <p class="mb-0 " style="margin-top: -70px;">atau daftar sebagai? <a href="./registrasi_mahasiswa.php" class="text-white-50 fw-bold"> Mahasiswa</a>
                     </p>
                   </div>
                   <?php if (!empty($_GET['error'])){
