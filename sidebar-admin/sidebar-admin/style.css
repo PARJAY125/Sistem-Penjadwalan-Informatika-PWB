@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-color: #111827;
+    width: 260px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.main-content {
+    background-color: #EEEEEE;
+    flex-grow: 1;
+}
+
+.sidebar .description-header {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+    color: #EEEEEE;
+}
+
+.sidebar a {
+    text-decoration: none;
+}
+
+.sidebar .header .illustration{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin : 20px 0 20px 0;
+    box-sizing: border-box;
+    color: #EEEEEE;
+} 
+
+.sidebar .header .illustration .description-illustration{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.sidebar .header .illustration .icon {
+    margin-right: 12px;
+    border-radius: 20px;
+}
+
+.sidebar .main .list-item{
+    align-items: center;
+    padding: 10px 10px;
+    align-items: center;
+    border-radius: 8px;
+    width: 212px;
+    box-sizing: border-box;
+    transition: all ease-in .2s
+}
+
+.sidebar .main .list-item .icon{
+    margin-right: 2px;
+}
+
+.sidebar .main .list-item .description{
+    margin-left: 5px;
+    color: #EEEEEE;
+}
+
+.sidebar .main .list-item:hover{
+    background-color: rgb(55, 55, 255);
+    transition: all ease-in .2s
+}
+
+/* ========== Main Content ========== */
+.main-content {
+    background: white;
+}
+
+.topbar {
+    width: 95%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.topbar .toggle-2{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.topbar .toggle-2 .search{
+    margin-right: 50px;
+}
+
+.mainbar .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table th, .table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .table th {
+    background-color: #f2f2f2;
+  }
+  
+  .table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
