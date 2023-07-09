@@ -35,7 +35,7 @@ if ($result->num_rows > 0) {
                 <td>" . $row["nama_kode_kelas"]. "</td>
                 <td>" . date('D, d M Y H:i', strtotime($row["waktu_kuliah"])). "</td>
                 <td>" . $row["lokasi"]. "</td>
-                <td>" . $row["komentar"]. "</td>
+                <td>" . "<button>Tombol komentar</button>". "</td>
               </tr>";
     }
 } else {
