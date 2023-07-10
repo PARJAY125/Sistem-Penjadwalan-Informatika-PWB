@@ -25,16 +25,18 @@
                     <h3 class="text-white-50 mb-5">Sistem Penjadwalan!</h3>
       
                     <div class="form-outline form-white">
-                      <input type="email" id="typeEmail" class="form-control form-control-lg" placeholder="Email" />
+                      <form action="../backend_php/login.php" method="post">
+                      <input type="email" id="typeEmail" class="form-control form-control-lg" placeholder="Email" name="email"/>
                       <label class="form-label" for="typeEmail"></label>
                     </div>
       
                     <div class="form-outline form-white">
-                      <input type="password" id="typePassword" class="form-control form-control-lg" placeholder="Password" />
+                      <input type="password" id="typePassword" class="form-control form-control-lg" placeholder="Password" name="password"/>
                       <label class="form-label" for="typePassword"></label>
                     </div>
 
-                    <button type="button" class="btn btn-primary" style="width: 100%; height: 50px;">Login</button>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; height: 50px;">Login</button>
+                      </form>
       
                     
                   </div>
