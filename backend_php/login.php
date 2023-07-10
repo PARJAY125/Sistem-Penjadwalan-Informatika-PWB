@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         var_dump($temp);
         $_SESSION[$username] = $temp['username'];
         if($temp['role'] === 'admin'){
-            header('Location: ../sidebar-admin/index.html');
+            header('Location: ../penjadwalan-admin/index.php');
         }elseif($temp['role'] === 'mahasiswa'){
             header('Location: ../mahasiswa/dashboard.php');
         }else{
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     }else{
         var_dump($_POST);
-        header('Location: ../web_penjadwalan/login.hml');
+        header('Location: ../web_penjadwalan/login.html');
         exit;
     }
 }
