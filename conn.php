@@ -1,7 +1,7 @@
 <?php
 
 $host = 'localhost'; // Change this if your database is hosted on a different server
-$dbName = 'mahasiswa'; // Replace with your actual database name
+$dbName = 'jadwal_kuliah_informatika'; // Replace with your actual database name
 $username = 'root'; // Replace with your actual database username
 $password = '125125'; // Replace with your actual database password
 
@@ -11,8 +11,6 @@ try {
 
     if ($conn->connect_error) 
         throw new Exception('Gagal terhubung dengan database: ' . $conn->connect_error);
-
-    // echo "Terhubung dengan database";
 } catch (Exception $e) {
     echo "Terjadi kesalahan: " . $e->getMessage();
 }
