@@ -1,7 +1,7 @@
 <?php
 
 $host = 'localhost'; // Change this if your database is hosted on a different server
-$dbName = 'mahasiswa'; // Replace with your actual database name
+$dbName = 'jadwal_kuliah_informatika'; // Replace with your actual database name
 $username = 'root'; // Replace with your actual database username
 $password = '125125'; // Replace with your actual database password
 

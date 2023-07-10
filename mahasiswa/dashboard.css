@@ -1,0 +1,117 @@
+body {
+  font-family: Arial, sans-serif;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+}
+#calendar {
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 100%;
+}
+#calendar th,
+#calendar td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid black;
+}
+#course-list {
+  margin-top: 20px;
+  width: 100%;
+}
+#course-list th,
+#course-list td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid black;
+}
+#course-list th {
+  background-color: #f2f2f2;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.dashboard {
+  padding: 5px;
+  background-color: #f2f2f2;
+}
+
+.dashboard h2 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.dashboard .summary {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard .summary-box {
+  padding: 10px;
+  border: 1px solid black;
+  width: 100%;
+}
+
+.management-section {
+  margin-top: 50px;
+}
+
+.management-section h2 {
+  background-color: #f2f2f2;
+  text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  margin-bottom: 10px;
+}
+
+.user-list {
+  margin-top: 20px;
+}
+
+.user-list th,
+.user-list td {
+  padding: 10px;
+  text-align: left;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.user-list th {
+  text-align: center;
+}
+
+.notification-section {
+  margin-top: 50px;
+}
+
+.notification-section h2 {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.notification-list {
+  margin-top: 10px;
+}
+
+.notification-list li {
+  margin-bottom: 5px;
+}
