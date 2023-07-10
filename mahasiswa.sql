@@ -148,12 +148,11 @@ CREATE TABLE `mata_kuliah` (
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
-  `nama_lengkap` varchar(64) NOT NULL,
   `username` varchar(32) NOT NULL,
   `password` varchar(255) NOT NULL,
   `WA` varchar(32) DEFAULT NULL,
   `email` varchar(64) DEFAULT NULL,
-  `role` enum('admin','mahasiswa','dosen') NOT NULL
+  `role` enum('admin','user','dosen') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
