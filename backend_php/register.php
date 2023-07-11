@@ -27,13 +27,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             gagal_regis($role,'NIM Sudah Terdaftar');
         }
 
-        // Menambahkan User
-        // fatal flaw
-        add_user_table($conn,$name,$username,$email,$password,$role,$telp);
-        
-        // Mencari id pada tabel user
-        $user_id = find_user_id($conn, $username);
-
         // Memeriksa apakah kelas sudah benar
         $class = $_POST['class'];
         $query = "SELECT * FROM kelas WHERE nama_kode_kelas = '$class'";
@@ -41,6 +34,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if(mysqli_num_rows($class_row) === 0){
             gagal_regis($role,'Kelas tidak ada');
         }
+
+        // Menambahkan User
+        add_user_table($conn,$name,$username,$email,$password,$role,$telp);
+        
+        // Mencari id pada tabel user
+        $user_id = find_user_id($conn, $username);
         $class_row = mysqli_fetch_assoc($class_row);
         $class_id = $class_row['id'];
 
@@ -76,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         mysqli_query($conn,$query);
         
         $_SESSION['username'] = $name;
-        header('Location: ../web_penjadwalan/dashboard_dosen.html');
+        header('Location: ../dosen/dashboard.php');
         exit;
     }
 

@@ -27,24 +27,28 @@ include '../conn.php';
 
                   <div class="mb-md-5 mt-md-4 pb-5">
                     <h3 class="text-white-50 mb-5">Registrasi</h3>
-                  <form action="../backend_php/register.php?category=mahasiswa" method="post">
+                  <form class="needs-validation" action="../backend_php/register.php?category=mahasiswa" method="post" novalidate>
                     <div class="form-outline form-white">
-                        <input type="name" id="typeName" class="form-control form-control-lg" placeholder="Nama Lengkap" name="name" />
-                        <label class="form-label" for="typeName" ></label>
+                      <input type="name" id="typeName" class="form-control form-control-lg" placeholder="Nama Lengkap" name="name"  required/>
+                      <label class="form-label" for="typeName" ></label>  
+                      <div class="invalid-feedback">
+                        Please choose a username.
+                      </div>      
                     </div>
+                    
 
                     <div class="form-outline form-white">
-                        <input type="username" id="typeUsername" class="form-control form-control-lg" placeholder="Username atau NIM" name="username"/>
+                        <input type="username" id="typeUsername" class="form-control form-control-lg" placeholder="Username atau NIM" name="username" required/>
                         <label class="form-label" for="typeUsername" ></label>
                     </div>
 
                     <div class="form-outline form-white">
-                      <input type="email" id="typeEmail" class="form-control form-control-lg" placeholder="Email" name="email"/>
+                      <input type="email" id="typeEmail" class="form-control form-control-lg" placeholder="Email" name="email" required/>
                       <label class="form-label" for="typeEmail" ></label>
                     </div>
 
                     <div class="form-outline form-white">
-                      <input type="telp" id="typeTelp" class="form-control form-control-lg" placeholder="Nomor Telpon" name="telp"/>
+                      <input type="telp" id="typeTelp" class="form-control form-control-lg" placeholder="Nomor Telpon" name="telp" required/>
                       <label class="form-label" for="typeTelp"></label>
                     </div>
 
@@ -60,29 +64,20 @@ include '../conn.php';
                              while($row = $result->fetch_assoc()) {
                                echo "<option value='" . $row["nama_kode_kelas"]. "'>" . $row["nama_kode_kelas"]. "</option>";
                              }
-                           } else {
-                             echo "0 results";
-                           }
-                     
-                           // Menutup koneksi database
+                           } else echo "0 results";
                            $conn->close();
                         ?>
-                        <!-- <option class="form-label">none</option>
-                        <option class="form-label">1</option>
-                        <option class="form-label">2</option>
-                        <option class="form-label">3</option>
-                        <option class="form-label">4</option> -->
                       </select>
                       <label class="form-label" for="typeTelp"></label>
                     </div>
       
                     <div class="form-outline form-white">
-                      <input type="password" id="typePassword" class="form-control form-control-lg" placeholder="Password" name="password"/>
+                      <input type="password" id="typePassword" class="form-control form-control-lg" placeholder="Password" name="password" required/>
                       <label class="form-label" for="typePassword" ></label>
                     </div>
 
                     <div class="form-outline form-white">
-                        <input type="password" id="ConfirmPass" class="form-control form-control-lg" placeholder="Konfirmasi Password" />
+                        <input type="password" id="ConfirmPass" class="form-control form-control-lg" placeholder="Konfirmasi Password"  required/>
                         <label class="form-label" for="confirmpassword"></label>
                       </div>
 
