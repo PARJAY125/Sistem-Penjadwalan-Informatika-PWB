@@ -502,7 +502,7 @@
 
 				// Make an AJAX request to delete the data from the database
 				$.ajax({
-					url: "delete_mahasiswa.php", // Replace with the URL of your server-side script to delete the data
+					url: "delete_admin.php", // Replace with the URL of your server-side script to delete the data
 					type: "POST",
 					data: { id: id },
 					success: function(response) {

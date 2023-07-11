@@ -1,3 +1,7 @@
+<?php
+include '../conn.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -45,8 +49,31 @@
                     </div>
 
                     <div class="form-outline form-white">
-                        <input type="kelas" id="typeKelas" class="form-control form-control-lg" placeholder="Kelas" name="class"/>
-                        <label class="form-label" for="typeKelas" ></label>
+                      <select class="form-control form-control-lg" id="sel1" name="class">
+                        <option class="form-label">Kelas</option>
+                        <?php
+                           $sql = "SELECT * FROM kelas";  // Query SQL
+                           $result = $conn->query($sql);  // Eksekusi query
+                     
+                           if ($result->num_rows > 0) {
+                             // Output data dari setiap baris
+                             while($row = $result->fetch_assoc()) {
+                               echo "<option value='" . $row["nama_kode_kelas"]. "'>" . $row["nama_kode_kelas"]. "</option>";
+                             }
+                           } else {
+                             echo "0 results";
+                           }
+                     
+                           // Menutup koneksi database
+                           $conn->close();
+                        ?>
+                        <!-- <option class="form-label">none</option>
+                        <option class="form-label">1</option>
+                        <option class="form-label">2</option>
+                        <option class="form-label">3</option>
+                        <option class="form-label">4</option> -->
+                      </select>
+                      <label class="form-label" for="typeTelp"></label>
                     </div>
       
                     <div class="form-outline form-white">

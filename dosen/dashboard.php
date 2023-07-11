@@ -11,6 +11,8 @@ $sql = "SELECT jadwal_kuliah.id as nomor, user.username as nama_dosen, mata_kuli
         INNER JOIN kelas ON kelas_partisipan_pada_jadwal_kuliah.id_kelas = kelas.id";
 
 $result = $conn->query($sql);
+
+
 ?>
 
 <!DOCTYPE html>

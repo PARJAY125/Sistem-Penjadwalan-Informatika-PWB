@@ -1,5 +1,5 @@
 <?php
-include("..\conn.php");
+include("../conn.php");
 session_start();
 
 
@@ -28,6 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         // Menambahkan User
+        // fatal flaw
         add_user_table($conn,$name,$username,$email,$password,$role,$telp);
         
         // Mencari id pada tabel user
@@ -79,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    
+
 
 }
 

@@ -11,6 +11,13 @@ $sql = "SELECT jadwal_kuliah.id as nomor, user.username as nama_dosen, mata_kuli
         INNER JOIN kelas ON kelas_partisipan_pada_jadwal_kuliah.id_kelas = kelas.id";
 
 $result = $conn->query($sql);
+
+session_start();
+if (isset($_SESSION)) {
+  // There is a session.
+} else {
+  // kick
+}
 ?>
 
 <!DOCTYPE html>
@@ -99,7 +106,11 @@ $result = $conn->query($sql);
           <button class="btn btn-secondary" id="button-toggle">
             <i class="bi bi-list"></i>
           </button>
-          <p style="margin-left: 85%; margin-top: -40px; font-size: 25px; font-weight: bold; color: #999999;">Username</p>
+          <p style="margin-left: 85%; margin-top: -40px; font-size: 25px; font-weight: bold; color: #999999;">
+            <?php
+              echo("{$_SESSION['username']}")
+            ?>
+          </p>
           <img src="./assets/logout.svg" alt="" width="30px" style="margin-left: 95%; margin-top: -90px;">
           
           <div class="card mt-5">
